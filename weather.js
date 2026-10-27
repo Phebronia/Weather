@@ -17,12 +17,6 @@ let weatherDescription = document.getElementById("weather-description")
 
 let forecastCard = document.querySelectorAll(".forecast-card")
 let currentDate = document.getElementById("current-date");
-currentDate.textContent = new Date().toLocaleDateString("en-US", {
-  weekday: "long",
-  month: "long",
-  day: "numeric",
-  year: "numeric"
-});
 
 
 async function getWeather(latitude, longitude) {
@@ -95,6 +89,12 @@ async function getWeather(latitude, longitude) {
     let [year, month, day] = dateString.split("-").map(Number);
     let datee = new Date(year, month - 1, day);
     let dayName = datee.toLocaleDateString("en-US", { weekday: "long" });
+    currentDate.textContent = new Date().toLocaleDateString("en-US", {
+      weekday: "long",
+      month: "long",
+      day: "numeric",
+      year: "numeric"
+    });
 
     forecastDates.textContent = datee.toLocaleDateString("en-US", {
       month: "short",
