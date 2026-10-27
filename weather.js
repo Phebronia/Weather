@@ -87,7 +87,7 @@ async function getWeather(latitude, longitude) {
     let maxTemp = data.daily.temperature_2m_max[forecastIndex];
     let minTemp = data.daily.temperature_2m_min[forecastIndex]
     let maxT = card.querySelector("strong")
-    let minT = card.querySelector("span")
+    let minT = card.querySelector(".forecast-temp span")
     maxT.textContent = maxTemp + " °"
     minT.textContent = minTemp + " °"
 
