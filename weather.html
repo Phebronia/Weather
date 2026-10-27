@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080d24" />
+  <title>Weather App — Explore the Sky</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="weather.css" />
+</head>
+<body>
+  <div class="sky-glow sky-glow-one"></div>
+  <div class="sky-glow sky-glow-two"></div>
+
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Weather App home">
+        <span class="brand-icon" aria-hidden="true">🌤️</span>
+        <span>
+          <span class="brand-title">Weather App</span>
+          <span class="brand-subtitle">EXPLORE THE SKY</span>
+        </span>
+      </a>
+    </header>
+
+    <form class="search-form" id="search-form">
+      <p id="error-message"></p>
+      <label class="visually-hidden" for="city-input">Search for a city</label>
+      <input id="city-input" name="city" type="text" placeholder="Search for a city..." autocomplete="off" />
+      <button class="search-button" type="submit" aria-label="Search city">⌕</button>
+      
+    </form>
+
+    <section class="overview-grid" aria-label="Current weather">
+      <article class="current-card glass-panel">
+        <div class="current-copy">
+          <p class="location-kicker"><span class="pin-icon">⌖</span> <span id="city-name">Cairo</span></p>
+          <p class="country" id="country-name">Egypt</p>
+          <p class="date-line" id="current-date">A little weather magic awaits</p>
+          <p class="temperature"><span id="temperature">22</span><span class="degree">°C</span></p>
+          <p class="condition" id="weather-description">Clear sky</p>
+        </div>
+        <div class="moon-scene" aria-hidden="true">
+          <div class="moon"></div>
+          <span class="star star-one">✦</span>
+          <span class="star star-two">✧</span>
+          <span class="star star-three">✦</span>
+          <div class="cloud cloud-back"></div>
+          <div class="pyramid pyramid-one"></div>
+          <div class="pyramid pyramid-two"></div>
+          <div class="pyramid pyramid-three"></div>
+          <div class="city-line"></div>
+        </div>
+      </article>
+
+      <section class="metrics-grid" aria-label="Weather details">
+        <article class="metric-card glass-panel">
+          <span class="metric-icon purple">♨</span>
+          <p>Feels Like</p>
+          <strong id="feels-like">21°C</strong>
+        </article>
+        <article class="metric-card glass-panel">
+          <span class="metric-icon blue">♢</span>
+          <p>Humidity</p>
+          <strong id="humidity">56%</strong>
+        </article>
+        <article class="metric-card glass-panel">
+          <span class="metric-icon blue">≋</span>
+          <p>Wind Speed</p>
+          <strong id="wind-speed">14 km/h</strong>
+        </article>
+        <article class="metric-card glass-panel">
+          <span class="metric-icon purple">◎</span>
+          <p>Visibility</p>
+          <strong id="visibility">10 km</strong>
+        </article>
+        <article class="metric-card glass-panel">
+          <span class="metric-icon violet">◉</span>
+          <p>Pressure</p>
+          <strong id="pressure">1016 hPa</strong>
+        </article>
+        <article class="metric-card glass-panel">
+          <span class="metric-icon gold">☼</span>
+          <p>UV Index</p>
+          <strong><span id="uv-index">0</span> <small id="uv-level">Low</small></strong>
+        </article>
+      </section>
+    </section>
+
+    <section class="forecast-panel glass-panel" aria-label="Five-day forecast">
+      <div class="section-heading">
+        <h2><span class="calendar-icon">▦</span> 5-Day Forecast</h2>
+      </div>
+
+      <div class="forecast-grid">
+        <article class="forecast-card">
+          <p class="forecast-day">Today</p><p class="forecast-date">—</p>
+          <span class="forecast-icon">🌙</span>
+          <p class="forecast-temp"><strong>26°</strong><span>18°</span></p>
+          <p class="forecast-condition">Clear</p>
+        </article>
+        <article class="forecast-card">
+          <p class="forecast-day">Tomorrow</p><p class="forecast-date">—</p>
+          <span class="forecast-icon">☀️</span>
+          <p class="forecast-temp"><strong>28°</strong><span>17°</span></p>
+          <p class="forecast-condition">Sunny</p>
+        </article>
+        <article class="forecast-card">
+          <p class="forecast-day">—</p><p class="forecast-date">—</p>
+          <span class="forecast-icon">🌤️</span>
+          <p class="forecast-temp"><strong>27°</strong><span>18°</span></p>
+          <p class="forecast-condition">Partly cloudy</p>
+        </article>
+        <article class="forecast-card">
+          <p class="forecast-day">—</p><p class="forecast-date">—</p>
+          <span class="forecast-icon">☁️</span>
+          <p class="forecast-temp"><strong>26°</strong><span>18°</span></p>
+          <p class="forecast-condition">Cloudy</p>
+        </article>
+        <article class="forecast-card">
+          <p class="forecast-day">—</p><p class="forecast-date">—</p>
+          <span class="forecast-icon">☀️</span>
+          <p class="forecast-temp"><strong>27°</strong><span>17°</span></p>
+          <p class="forecast-condition">Sunny</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+  <script src="weather.js"></script>
+</body>
+</html>
